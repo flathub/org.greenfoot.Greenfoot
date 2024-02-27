@@ -3,16 +3,17 @@
   <id>org.greenfoot.Greenfoot</id>
   <name>Greenfoot</name>
   <developer_name>King's College London</developer_name>
-  <summary>Greenfoot</summary>
+  <summary>Educational Java IDE for beginners with support for graphics, animation and sound</summary>
+  <launchable type="desktop-id">org.greenfoot.Greenfoot.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-2.0-or-later</project_license>
+  <project_license>GPL-2.0-or-later WITH Classpath-exception-2.0</project_license>
   <url type="homepage">https://greenfoot.org</url>
   <url type="bugtracker">https://github.com/k-pet-group/BlueJ-Greenfoot/issues</url>
   <url type="faq">https://greenfoot.org/doc/faq</url>
   <url type="help">https://greenfoot.org/doc</url>
   <url type="contact">https://greenfoot.org/support</url>
   <url type="vcs-browser">https://github.com/k-pet-group/BlueJ-Greenfoot</url>
-  <description><p>Greenfoot is an integrated development environment using Java or Stride designed primarily for educational purposes at the high school and undergraduate level. It allows easy development of two-dimensional graphical applications, such as simulations and interactive games. It is licensed under the GPL 2.0 with the Classpath Exception.</p></description>
+  <description><p>Greenfoot is an integrated development environment using Java or Stride designed primarily for educational purposes at the high school and undergraduate level. It allows easy development of two-dimensional graphical applications, such as simulations and interactive games.</p></description>
   <screenshots>
     <screenshot type="default">
       <caption>Editor Window</caption>
