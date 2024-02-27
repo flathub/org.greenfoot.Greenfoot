@@ -4,6 +4,7 @@
   <name>Greenfoot</name>
   <developer_name>King's College London</developer_name>
   <summary>Greenfoot</summary>
+  <launchable type="desktop-id">org.greenfoot.Greenfoot.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0-or-later WITH Classpath-exception-2.0</project_license>
   <url type="homepage">https://greenfoot.org</url>
