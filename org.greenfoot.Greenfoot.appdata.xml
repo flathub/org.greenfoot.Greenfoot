@@ -2,18 +2,30 @@
 <component type="desktop">
   <id>org.greenfoot.Greenfoot</id>
   <name>Greenfoot</name>
-  <developer_name>King's College London</developer_name>
-  <summary>Greenfoot</summary>
+  <developer id="org.greenfoot">
+    <name>King's College London</name>
+  </developer>
+  <summary>Educational Java IDE for beginners with support for graphics, animation and sound</summary>
   <launchable type="desktop-id">org.greenfoot.Greenfoot.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-2.0-or-later</project_license>
+  <project_license>GPL-2.0-or-later WITH Classpath-exception-2.0</project_license>
+
   <url type="homepage">https://greenfoot.org</url>
   <url type="bugtracker">https://github.com/k-pet-group/BlueJ-Greenfoot/issues</url>
   <url type="faq">https://greenfoot.org/doc/faq</url>
   <url type="help">https://greenfoot.org/doc</url>
   <url type="contact">https://greenfoot.org/support</url>
   <url type="vcs-browser">https://github.com/k-pet-group/BlueJ-Greenfoot</url>
-  <description><p>Greenfoot is an integrated development environment using Java or Stride designed primarily for educational purposes at the high school and undergraduate level. It allows easy development of two-dimensional graphical applications, such as simulations and interactive games. It is licensed under the GPL 2.0 with the Classpath Exception.</p></description>
+  <update_contact>mike@barkmin.eu</update_contact>
+  <content_rating type="oars-1.1"/>
+  <description>
+    <p>
+      Greenfoot is an integrated development environment using Java or Stride
+      designed primarily for educational purposes at the high school and undergraduate level.
+      It allows easy development of two-dimensional graphical applications, such as
+      simulations and interactive games.
+    </p>
+  </description>
   <screenshots>
     <screenshot type="default">
       <caption>Editor Window</caption>
@@ -28,20 +40,12 @@
       <image>https://raw.githubusercontent.com/mikebarkmin/flathub/org.greenfoot.Greenfoot/img/03.png</image>
     </screenshot>
   </screenshots>
-  <categories>
-    <category>Development</category>
-    <category>Education</category>
-  </categories>
-  <kudos>
-    <kudo>HiDpiIcon</kudo>
-  </kudos>
   <releases>
+    <release date="2024-10-29" version="3.9.0"/>
     <release date="2023-12-01" version="3.8.2"/>
     <release date="2023-11-03" version="3.8.1"/>
     <release date="2023-09-18" version="3.8.0"/>
     <release date="2022-05-12" version="3.7.1"/>
     <release date="2021-06-14" version="3.7.0"/>
   </releases>
-  <update_contact>mike@barkmin.eu</update_contact>
-  <content_rating type="oars-1.1"></content_rating>
 </component>

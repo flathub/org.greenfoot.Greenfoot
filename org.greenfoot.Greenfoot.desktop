@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Greenfoot
+Comment=Educational Java IDE for beginners with support for graphics, animation and sound
 Exec=org.greenfoot.Greenfoot
 Type=Application
 Icon=org.greenfoot.Greenfoot

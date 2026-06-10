@@ -1,84 +1,95 @@
 {
-  "app-id": "org.greenfoot.Greenfoot",
-  "runtime": "org.freedesktop.Platform",
-  "runtime-version": "23.08",
-  "sdk": "org.freedesktop.Sdk",
-  "sdk-extensions": ["org.freedesktop.Sdk.Extension.openjdk21"],
-  "command": "org.greenfoot.Greenfoot",
-  "finish-args": [
-    "--env=PATH=/app/jre/bin:/usr/bin:/app/bin",
-    "--share=network",
-    "--socket=x11",
-    "--share=ipc",
-    "--device=dri",
-    "--socket=pulseaudio",
-    "--filesystem=host"
-  ],
-  "modules": [
-    {
-      "name": "openjdk",
-      "buildsystem": "simple",
-      "build-commands": ["/usr/lib/sdk/openjdk21/install.sh"]
-    },
-    {
-      "name": "javafx",
-      "buildsystem": "simple",
-      "build-commands": ["mkdir -p /app/javafx", "cp -r ./ /app/javafx"],
-      "sources": [
+    "app-id": "org.greenfoot.Greenfoot",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "25.08",
+    "sdk": "org.freedesktop.Sdk",
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.openjdk21"
+    ],
+    "command": "org.greenfoot.Greenfoot",
+    "finish-args": [
+        "--env=PATH=/app/jre/bin:/usr/bin:/app/bin",
+        "--share=network",
+        "--socket=x11",
+        "--share=ipc",
+        "--device=dri",
+        "--socket=pulseaudio",
+        "--filesystem=host"
+    ],
+    "modules": [
         {
-          "type": "archive",
-          "only-arches": ["x86_64"],
-          "url": "https://download2.gluonhq.com/openjfx/21/openjfx-21_linux-x64_bin-sdk.zip",
-          "sha256": "7d2fc17019540e04c1a0af7a333a8c7e0330d3a7f4579311d65e76320ea9a8c9"
+            "name": "openjdk",
+            "buildsystem": "simple",
+            "build-commands": [
+                "/usr/lib/sdk/openjdk21/install.sh"
+            ]
         },
         {
-          "type": "archive",
-          "only-arches": ["aarch64"],
-          "url": "https://download2.gluonhq.com/openjfx/21/openjfx-21_linux-aarch64_bin-sdk.zip",
-          "sha256": "d8d290064a0d63984fb75f031162450a53a4e19764a2fb1ac558b50ab396509c"
-        }
-      ]
-    },
-    {
-      "name": "greenfoot",
-      "buildsystem": "simple",
-      "build-commands": [
-        "unzip greenfoot-dist.jar -d dist",
-        "mkdir -p /app/greenfoot",
-        "cp -r dist/* /app/greenfoot",
-        "for size in 32 48 256; do install -Dm644 /app/greenfoot/lib/images/greenfoot-icon-${size}.png /app/share/icons/hicolor/${size}x${size}/apps/org.greenfoot.Greenfoot.png; done"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://www.greenfoot.org/download/files/Greenfoot-generic-390.jar",
-          "dest-filename": "Greenfoot-generic-390.zip",
-          "sha256": "d355c03a3284631aac9f10bd37be9a0341240206ae8aa87d7ea36cdffd6d12e6"
-        }
-      ]
-    },
-    {
-      "name": "greenfoot-startup",
-      "buildsystem": "simple",
-      "build-commands": [
-        "install -Dm755 greenfoot /app/bin/org.greenfoot.Greenfoot",
-        "install -Dm644 org.greenfoot.Greenfoot.desktop /app/share/applications/org.greenfoot.Greenfoot.desktop",
-        "install -Dm644 org.greenfoot.Greenfoot.appdata.xml /app/share/metainfo/org.greenfoot.Greenfoot.appdata.xml"
-      ],
-      "sources": [
-        {
-          "type": "file",
-          "path": "greenfoot"
+            "name": "javafx",
+            "buildsystem": "simple",
+            "build-commands": [
+                "mkdir -p /app/javafx",
+                "cp -r ./ /app/javafx"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "only-arches": [
+                        "x86_64"
+                    ],
+                    "url": "https://download2.gluonhq.com/openjfx/21/openjfx-21_linux-x64_bin-sdk.zip",
+                    "sha256": "7d2fc17019540e04c1a0af7a333a8c7e0330d3a7f4579311d65e76320ea9a8c9"
+                },
+                {
+                    "type": "archive",
+                    "only-arches": [
+                        "aarch64"
+                    ],
+                    "url": "https://download2.gluonhq.com/openjfx/21/openjfx-21_linux-aarch64_bin-sdk.zip",
+                    "sha256": "d8d290064a0d63984fb75f031162450a53a4e19764a2fb1ac558b50ab396509c"
+                }
+            ]
         },
         {
-          "type": "file",
-          "path": "org.greenfoot.Greenfoot.desktop"
+            "name": "greenfoot",
+            "buildsystem": "simple",
+            "build-commands": [
+                "unzip greenfoot-dist.jar -d dist",
+                "mkdir -p /app/greenfoot",
+                "cp -r dist/* /app/greenfoot",
+                "for size in 32 48 256; do install -Dm644 /app/greenfoot/lib/images/greenfoot-icon-${size}.png /app/share/icons/hicolor/${size}x${size}/apps/org.greenfoot.Greenfoot.png; done"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www.greenfoot.org/download/files/Greenfoot-generic-390.jar",
+                    "dest-filename": "Greenfoot-generic-390.zip",
+                    "sha256": "d355c03a3284631aac9f10bd37be9a0341240206ae8aa87d7ea36cdffd6d12e6"
+                }
+            ]
         },
         {
-          "type": "file",
-          "path": "org.greenfoot.Greenfoot.appdata.xml"
+            "name": "greenfoot-startup",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -Dm755 greenfoot /app/bin/org.greenfoot.Greenfoot",
+                "install -Dm644 ${FLATPAK_ID}.desktop -t /app/share/applications/",
+                "install -Dm644 ${FLATPAK_ID}.appdata.xml -t /app/share/metainfo/"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "path": "greenfoot"
+                },
+                {
+                    "type": "file",
+                    "path": "org.greenfoot.Greenfoot.desktop"
+                },
+                {
+                    "type": "file",
+                    "path": "org.greenfoot.Greenfoot.appdata.xml"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
